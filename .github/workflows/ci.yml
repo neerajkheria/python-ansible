@@ -3,12 +3,11 @@ name: CI for Ansible
 on:
   push:
     branches:
-      - master
+      - main
       - develop
-
   pull_request:
     branches:
-      - master
+      - main
       - develop
 
 jobs:
@@ -33,7 +32,7 @@ jobs:
         run: pip install ansible-lint
 
       - name: Lint Ansible Playbooks
-        run: ansible-lint playbooks/**/*.yml
+        run: ansible-lint playbooks/*.yml
 
   test:
     runs-on: ubuntu-latest
