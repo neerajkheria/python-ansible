@@ -1,0 +1,8 @@
+---
+- name: Example Playbook
+  hosts: webservers
+  tasks:
+    - name: Ensure the package is installed
+      apt:
+        name: vim
+        state: present
